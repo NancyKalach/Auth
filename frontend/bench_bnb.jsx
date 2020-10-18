@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { config } from 'rxjs';
 import Root from './components/root';
 
 import configureStore from './store/store';
