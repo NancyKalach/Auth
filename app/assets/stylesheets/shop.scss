@@ -1,0 +1,12 @@
+@import "variables";
+
+.shop{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    > img {
+        width: calc(100%/3) ;
+        cursor: pointer;
+        margin: 20px;
+    }
+}

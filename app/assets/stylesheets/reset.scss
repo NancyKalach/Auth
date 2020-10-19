@@ -1,0 +1,15 @@
+@import "variables";
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+  background-color: white ;
+  font-family: "Roboto", sans-serif;
+}

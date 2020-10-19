@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+@import "variables";
+
+.header {
+    background-image:url("BG.jpeg");
+    background-size: cover;
+    border-bottom: 1px solid $blue;
+    border-left:1px solid $blue;
+    border-right: 1px solid $blue;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-list{
+    display: flex;
+    box-sizing: border-box;
+
+    > li{
+        padding: 10px 20px;
+        border-left: 1px solid $blue;
+    }
+}
+
+.login-signup {
+    display: flex;
+    box-sizing: border-box;
+    
+    > li{
+        padding: 10px 20px;
+        border-left: 1px solid $blue;
+    }
+}
+

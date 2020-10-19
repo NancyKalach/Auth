@@ -1,0 +1,32 @@
+@import "variables";
+
+.login-form-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    background: $blue2;
+    border: 1px solid $blue;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-title{
+    margin: 0 0 20px 0;
+}
+
+.input{
+    margin: 0 0 20px 0;
+
+    > label{
+        display: block;
+        font-weight: 700;
+        padding: 0 0 5px 0;
+    }
+
+    > input {
+        border: 1px solid $blue;
+        border-radius: 5px;
+    }
+}
