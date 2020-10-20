@@ -5,6 +5,7 @@ import Header from './header/header';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import Shop from './shop/shop';
+import TopsIndexContainer from './items/tops_index_container';
 
 import {AuthRoute} from '../util/route_util';
 
@@ -14,6 +15,7 @@ const App = () => (
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
     <Route exact path="/shop" component={Shop} />
+    <Route exact path="/shop/tops" component={TopsIndexContainer} />
   </div>
 );
 

@@ -4,8 +4,11 @@ import Root from './components/root';
 
 import configureStore from './store/store';
 
+import { fetchAllTops } from './actions/tops_actions';
+
 
 document.addEventListener('DOMContentLoaded', () => {
+
     let store;
     if (window.currentUser){
         const preloadedState = {
@@ -24,6 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         store = configureStore();
     }
+
+    window.store = store;
+    window.dispatch = store.dispatch;
+    window.getState = store.getState;
+    window.fetchAllTops = fetchAllTops;
 
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store} />, root);

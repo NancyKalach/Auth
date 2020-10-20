@@ -48,7 +48,7 @@ class SessionForm extends React.Component {
                     </div>
 
                     <div className="input">
-                        <label for ="form-username">
+                        <label htmlFor ="form-username">
                             Username:
                         </label>
                             <input 
@@ -58,7 +58,7 @@ class SessionForm extends React.Component {
                             className="login-input" />
                     </div> 
                     <div className="input">
-                        <label for ="form-password">
+                        <label htmlFor ="form-password">
                             Password:
                         </label>
                             <input 

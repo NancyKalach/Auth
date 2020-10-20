@@ -1,18 +1,4 @@
-<%= javascript_pack_tag 'bundle' %>
 
-<% if logged_in? %>
-    <script id="bootstrap-current-user" type="text/javascript">
-        window.currentUser = <%= render("api/users/user.json.jbuilder", user: current_user).html_safe %>
-    </script>
-<% end %>
-
-<script type="text/javascript">
-   window.pants = "<%= image_url('pants.jpeg') %>"
-   window.dresses = "<%= image_url('dresses.jpeg') %>"
-   window.tops = "<%= image_url('tops.jpeg') %>"
-</script>
-
-
-<div id="root"> </main>
+<div id="root"> </div>
 
 

@@ -21,6 +21,9 @@
     border-bottom: 1px solid $blue;
     border-left:1px solid $blue;
     border-right: 1px solid $blue;
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
 
 .header-nav {
