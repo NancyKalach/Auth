@@ -4,7 +4,8 @@ import Root from './components/root';
 
 import configureStore from './store/store';
 
-import { fetchAllTops } from './actions/tops_actions';
+import { fetchAllItems } from './actions/items_actions'
+import { selectAllItems } from './reducers/selectors';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.store = store;
     window.dispatch = store.dispatch;
     window.getState = store.getState;
-    window.fetchAllTops = fetchAllTops;
+    window.fetchAllItems = fetchAllItems;
+    window.selectAllItems = selectAllItems;
 
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store} />, root);

@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_20_093003) do
+ActiveRecord::Schema.define(version: 2020_10_31_121250) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "items", force: :cascade do |t|
+    t.string "category", null: false
+    t.integer "price", null: false
+    t.string "size", null: false
+    t.string "description", null: false
+    t.string "photo_url", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "options", default: [], array: true
+  end
 
   create_table "tops", force: :cascade do |t|
     t.integer "price", null: false

@@ -10,8 +10,12 @@ class TopsIndex extends React.Component {
         const {tops} = this.props;
 
         return(
-            <ul className="tops-index">
-                { tops.map(top => <li key={top.id}> <img src={top.photo_url} /> </li>) }
+            <ul className="items-index">
+                { tops.map(top => <li key={top.id}> 
+                    <img src={top.photo_url}  /> 
+                    {detail}
+                    </li>)   
+                }
             </ul>
         )
     }

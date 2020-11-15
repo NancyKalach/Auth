@@ -6,27 +6,56 @@
     align-items: center;
     width: 50%;
     margin: 0 auto;
-    background: $blue2;
-    border: 1px solid $blue;
-    border-radius: 5px;
     box-sizing: border-box;
+    margin-top: 100px;
 }
 
-.form-title{
+.form-title, .form-request{
     margin: 0 0 20px 0;
+    width: 900px;
+    font-size: 20px;
 }
 
+.form-request{
+    border-bottom: 1px solid $gray;
+}
+
+.nav-link{
+    color: $gray;
+}
+
+.nav-link:hover{
+    color: $pink;
+}
 .input{
-    margin: 0 0 20px 0;
+    margin: 0 0 25px 0;
 
     > label{
         display: block;
-        font-weight: 700;
-        padding: 0 0 5px 0;
+        padding: 0 0 10px 0;
+        font-size: 17px;
     }
 
     > input {
-        border: 1px solid $blue;
+        border: 1px solid $gray;
         border-radius: 5px;
+        width: 500px;
+        height: 24px;
     }
+}
+
+.session-submit{
+    background: $pink;
+    border: $pink;
+    width: 450px;
+    height: 24px;
+    color: $black;
+    font-size: 17px;
+}
+
+.session-submit:hover{
+    background: $hover-pink;
+    transform: scale(1.05);
+    box-shadow: 0 3px 5px 0 #c36d6e;
+    transition: all 0.3s;
 }

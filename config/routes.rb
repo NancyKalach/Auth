@@ -3,6 +3,9 @@ Rails.application.routes.draw do
     resource :user, only: [:create]
     resource :session, only: [:create, :destroy, :show]
     resources :tops, only: [:show, :index]
+
+    resources :items, only: [:index, :show]
+
   end
   
   root "static_pages#root"

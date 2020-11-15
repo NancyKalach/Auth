@@ -42,14 +42,14 @@ class SessionForm extends React.Component {
                         Welcome to The NMK Shop
                     </div>
                         
-                    <div className="form-title">
+                    <div className="form-request">
                         Please {this.props.formType} or {this.props.navLink}
                         {this.renderErrors()}
                     </div>
 
                     <div className="input">
                         <label htmlFor ="form-username">
-                            Username:
+                            Username
                         </label>
                             <input 
                             type="text"
@@ -59,7 +59,7 @@ class SessionForm extends React.Component {
                     </div> 
                     <div className="input">
                         <label htmlFor ="form-password">
-                            Password:
+                            Password
                         </label>
                             <input 
                             type="password"
@@ -68,7 +68,7 @@ class SessionForm extends React.Component {
                             className="login-input" />
                     </div>
                     <div className="input">
-                        <input className="session-submit" type="submit" value={this.props.formType} />
+                        <button className="session-submit" type="submit">{this.props.formType}</button>
                     </div>
                 </form>
             </div>
