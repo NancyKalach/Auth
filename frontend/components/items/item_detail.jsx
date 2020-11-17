@@ -12,9 +12,9 @@ class ItemDetail extends React.Component {
 
         return(
             <div className="item-detail">
-                <img className="item" src={item.photo_url} /> 
+                <img className="single-item" src={item.photo_url} /> 
                 <ul>
-                    <li>Description: {item.description}</li>
+                    <li> {item.description}</li>
                     <li>Size: {item.size}</li>
                     <li>Price: {item.price}</li>
                 </ul>

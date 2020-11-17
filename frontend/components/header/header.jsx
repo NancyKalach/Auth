@@ -7,21 +7,27 @@ const Header = () => {
         <div className="header">
                 <nav className="header-nav">
                     <ul className="header-list">
+                        <li>
+                            <Link className="home" to="/">
+                                Home
+                            </Link>
+                        </li>
+
                         <li className="dropdown">
                             <div className="shop"> Shop </div>
                             <ul className="dropdown-items">
                                 <li>
-                                    <Link to='/items?category=tops'>
+                                    <Link to='/items/tops'>
                                         Tops
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to='/items?category=pants'>
+                                    <Link to='/items/pants'>
                                         Pants
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to='/items?category=jackets'>
+                                    <Link to='/items/jackets'>
                                         Jackets
                                     </Link>
                                 </li>

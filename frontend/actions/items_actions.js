@@ -1,7 +1,8 @@
 import * as APIUtil from '../util/item_api_util';
 
 export const RECEIVE_ALL_ITEMS = "RECEIVE_ALL_ITEMS";
-export const RECEIVE_SINGLE_ITEM = "RECEIVE_SINGLE_ITEM"
+export const RECEIVE_SINGLE_ITEM = "RECEIVE_SINGLE_ITEM";
+export const RECEIVE_FAVORITE_ITEM = "RECEIVE_FAVORITE_ITEM";
 
 
 export const receiveAllItems = items => ({
@@ -13,7 +14,11 @@ export const receiveSingleItem = item => ({
     type: RECEIVE_SINGLE_ITEM,
     item
 });
-  
+
+export const receiveFavoriteItem = id => ({
+    type: RECEIVE_FAVORITE_ITEM,
+    id
+})
 
 export const fetchAllItems = (category) => (dispatch) => {
     return APIUtil.fetchAllItems(category).then(items => {dispatch(receiveAllItems(items))});

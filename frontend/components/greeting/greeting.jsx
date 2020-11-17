@@ -12,6 +12,12 @@ const Greeting = ({currentUser, logout}) => {
             <li>
                 <Link className="signup" to = "/signup"> Sign up! </Link>
             </li>
+
+            <li>
+                <Link to ="/favorites">
+                <div> Favs! </div>
+                </Link>
+            </li>
         </ul>
     );
 

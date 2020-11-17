@@ -4,7 +4,7 @@ import Root from './components/root';
 
 import configureStore from './store/store';
 
-import { fetchAllItems } from './actions/items_actions'
+import { fetchAllItems, receiveFavoriteItem } from './actions/items_actions'
 import { selectAllItems } from './reducers/selectors';
 
 
@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.getState = store.getState;
     window.fetchAllItems = fetchAllItems;
     window.selectAllItems = selectAllItems;
+    window.receiveFavoriteItem = receiveFavoriteItem;
 
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store} />, root);

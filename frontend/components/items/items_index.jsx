@@ -1,23 +1,32 @@
 import React from 'react';
-import queryString from 'query-string';
 
-import ItemsList from './items_list';
+import ItemsListContainer from './items_list_container';
+
 
 class ItemsIndex extends React.Component {
 
     componentDidMount(){
-        const values = queryString.parse(this.props.location.search)
-        this.props.fetchAllItems(values.category);  
+        const category = this.props.match.params.category;
+        this.props.fetchAllItems(category);  
+    }
+
+    componentDidUpdate(prevProps){
+        const category = this.props.match.params.category;
+        if (category !== prevProps.match.params.category){
+            this.props.fetchAllItems(category);  
+        }
     }
     
     render(){
         const {items} = this.props;
+        const {receiveFavoriteItem} = this.props;
 
         return(
             <ul className="items-index">
                 { items.map(
-                    item => (
-                        <ItemsList item={item} />
+                    (item, idx) => (
+                        <ItemsListContainer
+                        item={item}  key={idx} />
                     )
                 ) 
                 }
