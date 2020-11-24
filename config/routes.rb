@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :tops, only: [:show, :index]
 
     resources :items, only: [:index, :show]
+    resources :favorites, only: [:create, :index, :destroy]
+    resources :carts, only: [:create, :index]
 
   end
   

@@ -12,5 +12,5 @@ const Auth = ({ component: Component, path, exact, loggedIn }) => (
     )} />
 );
 
-
 export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
+

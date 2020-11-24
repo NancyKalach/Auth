@@ -1,0 +1,1 @@
+json.extract! @cart, :item_id

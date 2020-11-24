@@ -4,6 +4,13 @@ export const fetchAllItems = (category) => (
       url: `api/items?category=${category}`
     })
 );
+
+export const fetchAll = () => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/items'
+  })
+);
   
 export const fetchSingleItem = id => (
   $.ajax({

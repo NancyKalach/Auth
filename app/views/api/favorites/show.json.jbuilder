@@ -1,0 +1,1 @@
+json.extract! @favorite, :item_id
