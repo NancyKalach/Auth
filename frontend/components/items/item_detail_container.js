@@ -17,7 +17,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = dispatch => ({
     fetchSingleItem: (id) => dispatch(fetchSingleItem(id)),
     createFavorite: (favorite) => dispatch(createFavorite(favorite)),
-    createCartItem: () => dispatch(createCartItem())
+    createCartItem: (cart) => dispatch(createCartItem(cart))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ItemDetail);

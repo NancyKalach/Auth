@@ -55,11 +55,22 @@
     width: 20px;
     position: relative;
     left: 175px;
-    bottom: 12px;
+    bottom: 22px;
     display: none;
     cursor: pointer;
 }
 
 .fav:hover > .delete-icon{
     display: block;
+}
+
+.fav-index{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fav{
+    height: 350px;
+    margin: 8px;
+    width: 200px;
 }

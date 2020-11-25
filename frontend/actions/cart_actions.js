@@ -8,15 +8,15 @@ export const receiveCartItem = cart => ({
     cart
 })
 
-export const receiveAllCartItems = items => ({
+export const receiveAllCartItems = carts => ({
     type: RECEIVE_ALL_CART_ITEMS,
-    items
+    carts
 })
 
-export const createCartItem = (item) => (dispatch) => {
-    return APIUtil.createCartItem(item).then(item => {dispatch(receiveCartItem(item))});
+export const createCartItem = (cart) => (dispatch) => {
+    return APIUtil.createCartItem(cart).then(cart => {dispatch(receiveCartItem(cart))});
 };
 
 export const fetchCartItems = () => (dispatch) => {
-    return APIUtil.fetchCartItems().then(items => dispatch(receiveAllCartItems(items)))
+    return APIUtil.fetchCartItems().then(carts => dispatch(receiveAllCartItems(carts)))
 }

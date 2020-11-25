@@ -6,15 +6,16 @@ class ItemDetail extends React.Component {
     constructor(props){
         super(props);
         const {item} = this.props;
-        this.state = { photo: item.photo_url};
+        this.state = { photo: ""};
         this.receiveCartItem = this.receiveCartItem.bind(this);
         this.receiveFavorite = this.receiveFavorite.bind(this);
-        this.changePhoto = this.changePhoto.bind(this);
+        
     }
 
     componentDidMount(){
         const id = this.props.match.params.itemId;
-        this.props.fetchSingleItem(id);
+        var that = this;
+        this.props.fetchSingleItem(id).then(function(){that.setState({photo: that.props.item.photo_url})})
     }
 
     receiveFavorite(e){ 
@@ -40,9 +41,7 @@ class ItemDetail extends React.Component {
         
     }
 
-    changePhoto(url){
-        this.setState({photo: url});
-    }
+
 
     render(){
         const {item, loading, options} = this.props;
@@ -61,7 +60,7 @@ class ItemDetail extends React.Component {
                         {options.map(
                             (option, idx) => (
                                     <li key={idx}> 
-                                        <img onClick={(e) => this.changePhoto(e, option)}
+                                        <img onClick={(e) => {this.setState({photo: option}).bind(this)}}
                                         className="option-image" src={option} /> 
                                     </li>
 
@@ -71,7 +70,7 @@ class ItemDetail extends React.Component {
                 </div> 
 
                 <div className="item-photo">
-                    <img className="single-item" src={item.photo_url} /> 
+                    <img className="single-item" src={this.state.photo} /> 
                 </div>  
 
                 <div className = "item-detail">

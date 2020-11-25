@@ -8,25 +8,37 @@ class Cart extends React.Component {
         const {loggedIn, cartItems} = this.props;
         if (loggedIn) {
             return(
-                <div className="category">
-                    <h1 className="fav-title"> MY CART <div className="fav-count">{cartItems.length} Products</div> </h1>
-                    
-                    <ul className="items-index">
-                        { cartItems.map(
-                            (item, idx) => (
-                                <li key={item.id} > 
-                                <Link to = {`/items/${item.id}`}>
-                                    <img className="item" src={item.photo_url} /> 
-                                </Link>
-                                <ul className="fav-details">
-                                    <li className="description"> {item.description}</li>
-                                    <li className="price"> $ {item.price}</li>
-                                </ul>
-                            </li>
-                            )
-                        ) 
-                        }
-                    </ul>
+                <div className="cart">
+                    <div className="cart-item-detail">
+                        <h1 className="cart-title"> MY CART <div className="cart-count">{cartItems.length} Products</div> </h1>
+                        <ul className="carts-index">
+                            { cartItems.map(
+                                (item, idx) => (
+                                    <div className="cart-list-container">
+                                        <li className="cart-list" key={item.id} > 
+                                            <div>
+                                                <Link to = {`/items/${item.id}`}>
+                                                    <img className="cart-item" src={item.photo_url} /> 
+                                                </Link>
+                                            </div>
+                                            <div>
+                                                <ul className="cart-details">
+                                                    <li className="cart-description"> {item.description}</li>
+                                                    <li className="cart-size"> Size: {item.size}</li>
+                                                    <li className="cart-price"> $ {item.price}.00</li>
+                                                </ul>
+                                            </div>
+
+                                        </li>
+                                    </div>
+                                )
+                            )}
+                        </ul>
+                    </div>
+
+                    <div className="order-summary">
+                        Order Summary 
+                    </div>
                 </div>
             )
         } else {

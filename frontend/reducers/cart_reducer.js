@@ -13,7 +13,7 @@ const cartReducer = (state = [], action) => {
           return [...state];
         }
       case RECEIVE_ALL_CART_ITEMS:
-        return Object.values(action.items).map((item) => item.item_id)
+        return Object.values(action.carts).map((cart) => cart.item_id)
       default:
         return state;
     }

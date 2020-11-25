@@ -1,5 +1,91 @@
+@import "variables";
+
+.cart{
+    padding-top: 20px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-item-detail{
+    width: 750px;
+}
+
+.cart-title{
+    margin-left: 15px;
+}
+
+.cart-list-container::before{
+    content: ""; 
+    display: block; 
+    width: 50%; 
+    padding-top: 20px; 
+    border-bottom: 1px solid $gray; 
+}
+
+// .cart-title{
+//     text-align: center;
+// }
+
+
+.cart-count{
+    font-size: 18px;
+    margin-top: 10px;
+    color: $gray;
+}
+
+// .carts-index{
+//     display: flex;
+//     flex-direction: column;
+//     > li {
+//         margin: 8px;
+//         width: 200px;
+//     }
+// }
+
+.cart-list {
+    margin: 8px;
+    width: 200px;   
+    display: flex;
+}
+
+.cart-item{
+    width: 115px;
+    height: 152px;
+}
+
+.cart-item:hover{
+    opacity: 0.8;
+}
+
+
+.cart-details{
+    width: 174px;
+}
+
+
+
+.cart-description{
+    color: $gray;
+    margin: 5px 0;
+}
+
+.cart-price{
+    font-weight: bold;
+    position: relative;
+    left: 300px;
+}
+
+
 .cart-icon{
     width: 27px;
     position: relative;
     bottom: 5px;
+}
+
+.order-summary:after{
+    content: ""; 
+    display: block; 
+    width: 50%; 
+    padding-top: 20px; 
+    border-bottom: 1px solid $gray;    
 }

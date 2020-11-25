@@ -18,7 +18,7 @@ class Favorites extends React.Component {
                 <div className="category">
                     <h1 className="fav-title"> MY WISHLIST <div className="fav-count">{favoriteItems.length} Products</div> </h1>
                     
-                    <ul className="items-index">
+                    <ul className="fav-index">
                         { favoriteItems.map(
                             (favorite, idx) => (
                                 <li className="fav" key={idx} > 
