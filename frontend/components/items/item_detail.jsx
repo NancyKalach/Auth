@@ -5,7 +5,6 @@ class ItemDetail extends React.Component {
 
     constructor(props){
         super(props);
-        const {item} = this.props;
         this.state = { photo: ""};
         this.receiveCartItem = this.receiveCartItem.bind(this);
         this.receiveFavorite = this.receiveFavorite.bind(this);
@@ -19,7 +18,7 @@ class ItemDetail extends React.Component {
     }
 
     receiveFavorite(e){ 
-        if (!this.props.favorites.includes(this.props.item.id)){
+        if (!this.props.favoritesIds.includes(this.props.item.id)){
             this.props.createFavorite({user_id: this.props.currentUserId, item_id: this.props.item.id});
         }
 
@@ -31,7 +30,7 @@ class ItemDetail extends React.Component {
 
 
     receiveCartItem(e){ 
-        if (!this.props.cartItems.includes(this.props.item.id)){
+        if (!this.props.cartIds.includes(this.props.item.id)){
             this.props.createCartItem({user_id: this.props.currentUserId, item_id: this.props.item.id});
         }
 

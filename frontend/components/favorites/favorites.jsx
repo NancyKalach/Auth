@@ -1,9 +1,24 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Home from '../home/home';
 
 
 class Favorites extends React.Component {
+
+    constructor(props){
+        super(props);
+        this.deleteFav = this.deleteFav.bind(this);
+    }
+
+    deleteFav(favorite){
+        this.props.favoritesObject.forEach(
+            (fav) => {
+                if (favorite.id === fav.item_id){
+                    this.props.destroyFavorite(fav);
+                }
+            }
+        )
+
+    }
 
     render(){
         const home = window.home;
@@ -29,7 +44,8 @@ class Favorites extends React.Component {
                                     <li className="description"> {favorite.description}</li>
                                     <li className="price"> $ {favorite.price}</li>
                                 </ul>
-                                <img className="delete-icon" src={deletee} />
+                                <img className="delete-icon" src={deletee} 
+                                onClick={(e) => {this.deleteFav(favorite)}} />
                             </li>
                             )
                         ) 

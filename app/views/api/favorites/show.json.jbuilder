@@ -1,1 +1,2 @@
-json.extract! @favorite, :item_id
+json.extract! @favorite, :id, :user_id, :item_id
+

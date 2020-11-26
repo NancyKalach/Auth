@@ -12,3 +12,11 @@ export const fetchCartItems = () => (
       url: 'api/carts'
     })
 );
+
+export const destroyCartItem = cart => (
+    $.ajax({
+      method: 'DELETE',
+      url: `api/carts/${cart.id}`
+    })
+);
+  

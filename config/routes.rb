@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
     resources :items, only: [:index, :show]
     resources :favorites, only: [:create, :index, :destroy]
-    resources :carts, only: [:create, :index]
+    resources :carts, only: [:create, :index, :destroy]
 
   end
   

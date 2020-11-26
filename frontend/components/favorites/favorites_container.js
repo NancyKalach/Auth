@@ -1,12 +1,19 @@
 import { connect } from 'react-redux';
 
 import Favorites from './favorites';
-import { selectAllFavorites } from '../../reducers/selectors';
+import { selectAllFavItems, selectAllFavObjects} from '../../reducers/selectors';
+import {destroyFavorite} from '../../actions/favorites_actions';
 
 const mapStateToProps = (state) => ({
     loggedIn: Boolean(state.session.id),
-    favoriteItems: selectAllFavorites(state)
+    favoriteItems: selectAllFavItems(state),
+    currentUserId: state.session.id,
+    favoritesObject: selectAllFavObjects(state)
 });
 
 
-export default connect(mapStateToProps)(Favorites);
+const mapDispatchToProps = (dispatch) => ({
+    destroyFavorite: (favorite) => dispatch(destroyFavorite(favorite))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Favorites);

@@ -4,6 +4,32 @@ import {Link} from 'react-router-dom';
 
 class Cart extends React.Component {
 
+    constructor(props){
+        super(props);
+        this.deleteCartItem = this.deleteCartItem.bind(this);
+        this.cartTotal = this.cartTotal.bind(this);
+    }
+
+    deleteCartItem(item){
+        this.props.cartObjects.forEach(
+            (cart) => {
+                if (item.id === cart.item_id){
+                    this.props.destroyCartItem(cart);
+                }
+            }
+        )
+
+        this.forceUpdate();
+    }
+
+    cartTotal(){
+        var sum = 0;
+        this.props.cartItems.forEach( (item) => {
+            sum += item.price;
+        })
+        return sum;
+    }
+
     render(){
         const {loggedIn, cartItems} = this.props;
         if (loggedIn) {
@@ -15,7 +41,7 @@ class Cart extends React.Component {
                             { cartItems.map(
                                 (item, idx) => (
                                     <div className="cart-list-container">
-                                        <li className="cart-list" key={item.id} > 
+                                        <li className="cart-list" key={idx} > 
                                             <div>
                                                 <Link to = {`/items/${item.id}`}>
                                                     <img className="cart-item" src={item.photo_url} /> 
@@ -26,6 +52,8 @@ class Cart extends React.Component {
                                                     <li className="cart-description"> {item.description}</li>
                                                     <li className="cart-size"> Size: {item.size}</li>
                                                     <li className="cart-price"> $ {item.price}.00</li>
+                                                    <li onClick={(e) => {this.deleteCartItem(item)}}
+                                                    className="cart-delete"> Delete </li>
                                                 </ul>
                                             </div>
 
@@ -37,7 +65,10 @@ class Cart extends React.Component {
                     </div>
 
                     <div className="order-summary">
-                        Order Summary 
+                        <div className="order-summary-title">  Order Summary </div>
+                        <div className="subtotal"> Subtotal</div>
+                        <div className="total"> $ {this.cartTotal()}.00 </div>
+                        <button className="total-submit"> CHECKOUT </button> 
                     </div>
                 </div>
             )

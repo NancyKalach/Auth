@@ -6,7 +6,7 @@ import configureStore from './store/store';
 
 import { fetchAllItems, fetchAll } from './actions/items_actions'
 import { receiveFavoriteItem, fetchFavorites, createFavorite, destroyFavorite} from './actions/favorites_actions'
-import { selectAllItems, selectAllFavorites, selectAll } from './reducers/selectors';
+import { selectAllItems, selectAllFavorites, selectAll, selectAllFavs} from './reducers/selectors';
 import {fetchCartItems, createCartItem} from './actions/cart_actions'
 
 
@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.createCartItem = createCartItem;
     window.fetchCartItems = fetchCartItems;
     window.destroyFavorite = destroyFavorite;
+    window.selectAllFavs= selectAllFavs;
 
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store} />, root);

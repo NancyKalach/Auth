@@ -20,13 +20,16 @@
     flex-wrap: wrap;
     > li {
         margin: 8px;
-        width: 200px;
+        border: 1px solid $gray;
+        width: 240px;
+        height: 380px;
     }
 }
 
 .item{
-    width: 200px;
     height: 300px;
+    width: 226px;
+    margin: 7px;
 }
 
 .details{
@@ -34,6 +37,7 @@
     bottom: 35px;
     display: inline;
     font-size: 13px;
+    left: 10px;
 }
 
 .item:hover{
@@ -53,10 +57,11 @@
 
 .favorite-icon{
     position: relative;
-    bottom: 33px;
-    left: 170px;
+    bottom: 10%;
+    left: 85%;
     width: 30px;
     cursor: pointer;
+    
 }
 
 .item-detail-container{

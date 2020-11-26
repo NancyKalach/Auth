@@ -17,7 +17,7 @@ class Api::FavoritesController < ApplicationController
         @favorite = Favorite.find(params[:id])
         @favorite.destroy
 
-        render :index
+        render :show
     end
 
     private

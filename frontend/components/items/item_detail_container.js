@@ -3,15 +3,16 @@ import { connect } from 'react-redux';
 import { fetchSingleItem } from '../../actions/items_actions';
 import { createCartItem } from '../../actions/cart_actions';
 import { createFavorite } from '../../actions/favorites_actions';
+import {selectAllCartIds, selectAllFavIds} from '../../reducers/selectors'
 import ItemDetail from './item_detail';
 
 const mapStateToProps = (state) => ({
     item: state.entities.item,
     options: state.entities.item.options,
     loading: state.ui.loading.detailLoading,
-    cartItems: state.entities.cart,
-    favorites: state.entities.favorites,
-    currentUserId: state.session.id
+    currentUserId: state.session.id,
+    cartIds: selectAllCartIds(state),
+    favoritesIds: selectAllFavIds(state)
 });
 
 const mapDispatchToProps = dispatch => ({

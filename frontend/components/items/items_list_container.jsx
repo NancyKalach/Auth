@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 
-import { selectAllItems} from '../../reducers/selectors';
+import { selectAllItems, selectAllFavIds} from '../../reducers/selectors';
 import { createFavorite } from '../../actions/favorites_actions';
 import ItemsList from './items_list';
 
 const mapStateToProps = (state) => ({
     items: selectAllItems(state),
-    favorites: state.entities.favorites,
+    favoritesIds: selectAllFavIds(state),
     currentUserId: state.session.id
 });
 
