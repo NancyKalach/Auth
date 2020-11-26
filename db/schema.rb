@@ -40,15 +40,6 @@ ActiveRecord::Schema.define(version: 2020_11_22_082742) do
     t.string "options", default: [], array: true
   end
 
-  create_table "tops", force: :cascade do |t|
-    t.integer "price", null: false
-    t.string "size", null: false
-    t.string "description", null: false
-    t.string "photo_url", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
     t.string "password_digest", null: false
