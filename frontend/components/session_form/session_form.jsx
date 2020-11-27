@@ -51,7 +51,8 @@ class SessionForm extends React.Component {
     render(){
         return (
             <div className = "login-form-container">
-                <form className = "login-form-box" onSubmit={this.handleSubmit}>
+                <form autocomplete="off"
+                className = "login-form-box" onSubmit={this.handleSubmit}>
                     { this.title()}
                     <div className="form-request">
                         Please {this.props.formType} or {this.props.navLink}

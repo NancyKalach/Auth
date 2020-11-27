@@ -39,7 +39,7 @@ class ItemsList extends React.Component {
 
                 <ul className="details">
                     <li className="description"> {item.description}</li>
-                    <li className="price"> $ {item.price}</li>
+                    <li className="price"> $ {item.price}.00</li>
                 </ul>
             </li>
         );

@@ -30,7 +30,7 @@ const Contact = () => {
             </div>   
 
             <div className="contact-form-container">
-                <form className = "contact-form">
+                <form autocomplete="off" className = "contact-form">
                     <h2> Send a message from here</h2>  
                         <div className="input">
                             <label htmlFor ="form-username">

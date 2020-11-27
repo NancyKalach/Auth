@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.getState = store.getState;
     window.fetchAllItems = fetchAllItems;
     window.selectAllItems = selectAllItems;
-    window.selectAllFavorites = selectAllFavorites;
     window.receiveFavoriteItem = receiveFavoriteItem;
     window.fetchAll = fetchAll;
     window.selectAll = selectAll;
@@ -45,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.createCartItem = createCartItem;
     window.fetchCartItems = fetchCartItems;
     window.destroyFavorite = destroyFavorite;
-    window.selectAllFavs= selectAllFavs;
 
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store} />, root);

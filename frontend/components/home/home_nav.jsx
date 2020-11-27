@@ -17,15 +17,15 @@ const HomeNav = () => {
             Jackets
         </Link>
         
-        <Link>
+        <Link to="/">
             Category
         </Link>
 
-        <Link>
+        <Link to="/">
             Category
         </Link>
 
-        <Link>
+        <Link to="/">
             Category
         </Link>
     </div>

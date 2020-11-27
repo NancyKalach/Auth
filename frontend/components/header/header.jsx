@@ -32,7 +32,7 @@ class Header extends React.Component {
                             </li>
 
                             <li>
-                                <Link>
+                                <Link to ="/">
                                     <img className="cart-icon" title="Shop our Facebook" src={fb} />
                                 </Link>
                             </li>
@@ -40,6 +40,7 @@ class Header extends React.Component {
                         </ul>
     
                         <h2 className="logo">The NMK Shop</h2>
+                        
                         <GreetingContainer />
                     </nav>
             </div>

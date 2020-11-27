@@ -42,7 +42,7 @@ class Favorites extends React.Component {
                                 </Link>
                                 <ul className="fav-details">
                                     <li className="description"> {favorite.description}</li>
-                                    <li className="price"> $ {favorite.price}</li>
+                                    <li className="price"> $ {favorite.price}.00</li>
                                 </ul>
                                 <img className="delete-icon" src={deletee} 
                                 onClick={(e) => {this.deleteFav(favorite)}} />

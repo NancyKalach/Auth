@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  
     <title>The NMK Shop</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,6 +10,7 @@
     <%= javascript_pack_tag 'application' %>
 
     <%= javascript_pack_tag 'bundle' %>
+    
 
     <% if logged_in? %>
       <script id="bootstrap-current-user" type="text/javascript">
@@ -35,6 +37,7 @@
       window.delete = "<%= image_url('delete.png') %>"
       
     </script>
+
 
   </head>
 
