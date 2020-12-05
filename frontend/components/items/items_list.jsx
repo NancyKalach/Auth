@@ -9,8 +9,8 @@ class ItemsList extends React.Component {
     }
 
     receiveFavorite(e){ 
-        if (!this.props.favoritesIds.includes(this.props.item.id)){
-            this.props.createFavorite({user_id: this.props.currentUserId, item_id: this.props.item.id});
+        if (!this.props.favoritesIds.includes(this.props.item.id) && (this.props.currentUserId)){
+            this.props.createFavorite({user_id: this.props.currentUserId, item_id: this.props.item.id}).then(alert("This item has been added to your favorites"));
         }
 
         if (!this.props.currentUserId){
@@ -23,10 +23,6 @@ class ItemsList extends React.Component {
     render(){
         const {item, favoritesIds} = this.props;
 
-        const icon = window.icon;
-        const favorite = window.favorite;
-
-
         return(
             <li key={item.id} > 
                 <Link to = {`/items/${item.id}`}>
@@ -34,7 +30,7 @@ class ItemsList extends React.Component {
                 </Link>
                 
                 <img onClick={(e)=> {this.receiveFavorite(e)}} className="favorite-icon" 
-                src={ favoritesIds.includes(item.id) ? favorite : icon}
+                src={ favoritesIds.includes(item.id) ? "https://nmkshop.s3.us-east-2.amazonaws.com/favorite.png" : "https://nmkshop.s3.us-east-2.amazonaws.com/icon.png"}
                 title="Add to favorites"/>
 
                 <ul className="details">

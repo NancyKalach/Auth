@@ -19,15 +19,12 @@ class Greeting extends React.Component{
 
     render(){
         const {currentUser, logout} = this.props;
-        const fav = window.fav;
-        const cart = window.cart;
-        const arrow = window.arrow;
 
         const sessionLinks = () => (
             <ul className = "login-signup">
                 <li className="dropdown" onClick={(e) => this.dropdownClick(e)}>
                     <div className="account"> 
-                        MY ACCOUNT <img className="cart-icon" src={arrow}/>
+                        MY ACCOUNT <img className="cart-icon" src="https://nmkshop.s3.us-east-2.amazonaws.com/arrow.png"/>
                     </div>
                         <ul className={ (this.state.dropdown) ? "account-dropdown" : "account-dropdown-click"}>
                             <li>
@@ -51,13 +48,13 @@ class Greeting extends React.Component{
     
                 <li>
                     <Link to ="/userfavorites">
-                    <img className="fav-icon" title="Your Favorites" src={ fav }/>
+                    <img className="fav-icon" title="Your Favorites" src="https://nmkshop.s3.us-east-2.amazonaws.com/fav.png"/>
                     </Link>
                 </li>
     
                 <li>
                     <Link to ="/cart">
-                    <img className="cart-icon" title="Your Cart" src={cart}/>
+                    <img className="cart-icon" title="Your Cart" src="https://nmkshop.s3.us-east-2.amazonaws.com/cart.png"/>
                     </Link>
                 </li>
             </ul>
@@ -67,7 +64,7 @@ class Greeting extends React.Component{
             <ul className = "login-signup">
                 <li className="dropdown" onClick={(e) => this.dropdownClick(e)}>
                     <div className="account">  
-                        Hi, {currentUser.username} ! <img className="cart-icon" src={arrow}/>
+                        Hi, {currentUser.username} ! <img className="cart-icon" src="https://nmkshop.s3.us-east-2.amazonaws.com/arrow.png"/>
                     </div>
                         <ul className={ (this.state.dropdown) ? "account-dropdown" : "account-dropdown-click"}>
                             <li>
@@ -85,12 +82,12 @@ class Greeting extends React.Component{
     
                 <li>
                     <Link to ="/userfavorites">
-                    <img className="fav-icon" title="Your Favorites" src={ fav }/>
+                    <img className="fav-icon" title="Your Favorites" src="https://nmkshop.s3.us-east-2.amazonaws.com/fav.png"/>
                     </Link>
                 </li>                       
                 <li>
                     <Link to ="/cart">
-                    <img className="cart-icon" title="Your Cart" src={ cart }/>
+                    <img className="cart-icon" title="Your Cart" src="https://nmkshop.s3.us-east-2.amazonaws.com/cart.png"/>
                     </Link>
                 </li>
     

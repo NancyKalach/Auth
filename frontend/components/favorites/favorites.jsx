@@ -21,11 +21,6 @@ class Favorites extends React.Component {
     }
 
     render(){
-        const home = window.home;
-        const home2 = window.home2;
-        const home3 = window.home3;
-        const home4 = window.home4;
-        const deletee = window.delete;
 
         const {loggedIn, favoriteItems} = this.props;
         if (loggedIn) {
@@ -44,7 +39,7 @@ class Favorites extends React.Component {
                                     <li className="description"> {favorite.description}</li>
                                     <li className="price"> $ {favorite.price}.00</li>
                                 </ul>
-                                <img className="delete-icon" src={deletee} 
+                                <img className="delete-icon" src="https://nmkshop.s3.us-east-2.amazonaws.com/delete.png"
                                 onClick={(e) => {this.deleteFav(favorite)}} />
                             </li>
                             )
@@ -57,10 +52,10 @@ class Favorites extends React.Component {
             return(
                 <div>
                     <div className="fav-home">
-                        <img src={home} className="home"/>
-                        <img src={home2} className="home2" />
-                        <img src={home3} className="home3" />
-                        <img src={home4} className="home4" />
+                        <img src="https://nmkshop.s3.us-east-2.amazonaws.com/home.jpg" className="home"/>
+                        <img src="https://nmkshop.s3.us-east-2.amazonaws.com/home2.jpg" className="home2" />
+                        <img src="https://nmkshop.s3.us-east-2.amazonaws.com/home3.jpg" className="home3" />
+                        <img src="https://nmkshop.s3.us-east-2.amazonaws.com/home4.jpg" className="home4" />
                     </div>
 
             

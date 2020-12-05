@@ -18,8 +18,8 @@ class ItemDetail extends React.Component {
     }
 
     receiveFavorite(e){ 
-        if (!this.props.favoritesIds.includes(this.props.item.id)){
-            this.props.createFavorite({user_id: this.props.currentUserId, item_id: this.props.item.id});
+        if (!this.props.favoritesIds.includes(this.props.item.id) && (this.props.currentUserId)){
+            this.props.createFavorite({user_id: this.props.currentUserId, item_id: this.props.item.id}).then(alert("This item has been added to your favorites"));
         }
 
         if (!this.props.currentUserId){
@@ -30,8 +30,8 @@ class ItemDetail extends React.Component {
 
 
     receiveCartItem(e){ 
-        if (!this.props.cartIds.includes(this.props.item.id)){
-            this.props.createCartItem({user_id: this.props.currentUserId, item_id: this.props.item.id});
+        if (!this.props.cartIds.includes(this.props.item.id) && (this.props.currentUserId)){
+            this.props.createCartItem({user_id: this.props.currentUserId, item_id: this.props.item.id}).then(alert("This item has been added to your cart"));
         }
 
         if (!this.props.currentUserId){
@@ -44,8 +44,6 @@ class ItemDetail extends React.Component {
 
     render(){
         const {item, loading, options} = this.props;
-        const policy = window.policy;
-        const delivery = window.delivery;
 
         if (loading){
             return <LoadingIcon />;
@@ -86,7 +84,7 @@ class ItemDetail extends React.Component {
                     className="fav-submit" type="submit"> Add to Favorites</button>
                     <div className="policy">
                         <div >
-                            <div className="policy-icon-div"> <img className="policy-icon" src={delivery} /> </div>
+                            <div className="policy-icon-div"> <img className="policy-icon" src="https://nmkshop.s3.us-east-2.amazonaws.com/delivery.png" /> </div>
                             <div className="policy-text">
                                 <div className="policy-title"> Shipping Policy </div>
                                 <p className="shipping-policy">
@@ -99,7 +97,7 @@ class ItemDetail extends React.Component {
                         </div>
 
                         <div className="policy-text">
-                            <div className="policy-icon-div"> <img className="policy-icon" src={policy} /> </div>
+                            <div className="policy-icon-div"> <img className="policy-icon" src="https://nmkshop.s3.us-east-2.amazonaws.com/policy.png" /> </div>
                             <div className="policy-text">
                                 <div className="policy-title"> Return Policy </div>
                                 <p>

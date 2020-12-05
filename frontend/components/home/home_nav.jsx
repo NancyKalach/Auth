@@ -16,18 +16,6 @@ const HomeNav = () => {
         <Link to='/category/Jackets'>
             Jackets
         </Link>
-        
-        <Link to="/">
-            Category
-        </Link>
-
-        <Link to="/">
-            Category
-        </Link>
-
-        <Link to="/">
-            Category
-        </Link>
     </div>
     )
 };

@@ -2,15 +2,12 @@ import React from "react";
 
 const Contact = () => {
 
-    const iphone = window.iphone;
-    const inbox = window.inbox;
-
     return(
         <div className="contact">
             <div className="contact-us">
                 <h2> Have a Question?</h2>
                 <div className="contact-box">
-                    <div className="contact-logo"> <img className="contact-icon" src={iphone} /></div> 
+                    <div className="contact-logo"> <img className="contact-icon" src="https://nmkshop.s3.us-east-2.amazonaws.com/iphone.png" /></div> 
                     <p className="contact-text">
                         Call or Text us at <br />
                         XXXXXX <br />
@@ -19,7 +16,7 @@ const Contact = () => {
                     </p>
                 </div>
                 <div className="contact-box"> 
-                    <div className="contact-logo"> <img className="contact-icon" src={inbox} /></div> 
+                    <div className="contact-logo"> <img className="contact-icon" src="https://nmkshop.s3.us-east-2.amazonaws.com/inbox.png" /></div> 
                     <p className="contact-text">
                         Email Us at <br />
                         Example@example.com <br />

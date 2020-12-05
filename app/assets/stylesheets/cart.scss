@@ -22,25 +22,12 @@
     border-bottom: 1px solid $gray; 
 }
 
-// .cart-title{
-//     text-align: center;
-// }
-
-
 .cart-count{
     font-size: 18px;
     margin-top: 10px;
     color: $gray;
 }
 
-// .carts-index{
-//     display: flex;
-//     flex-direction: column;
-//     > li {
-//         margin: 8px;
-//         width: 200px;
-//     }
-// }
 
 .cart-list {
     margin: 8px;
@@ -134,4 +121,14 @@
     transform: scale(1.05);
     box-shadow: 0 3px 5px 0 #222222;
     transition: all 0.3s;
+}
+
+@media (max-width: 767px){
+
+    .cart-icon {
+        width: 20px;
+        position: relative;
+        bottom: 4px;
+    }
+
 }
