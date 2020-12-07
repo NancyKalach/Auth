@@ -1,5 +1,90 @@
 @import "variables";
 
+.fav-title{
+    text-align: center;
+}
+
 .favorites{
     margin-top: 100px
 }
+
+.fav-icon{
+    width: 27px;
+    position: relative;
+    bottom: 3px;
+    
+}
+
+.fav-details{
+    position: relative;
+    display: inline;
+    font-size: 13px;
+    left: 10px;
+}
+
+.fav-count{
+    font-size: 18px;
+    margin-top: 10px;
+    color: $gray;
+}
+
+.fav-auth{
+    background: white;
+    left: 35%;
+    top: 35%;
+    height: 155px;
+    width: 440px;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+}
+
+.fav-home{
+    position: absolute;
+}
+
+.fav-auth-1{
+    font-size: 17px;
+    margin-bottom: 20px;
+    background: $hover-pink;
+    height: 38px;
+}
+
+.fav-auth-2{
+    font-size: 15px;
+}
+
+.delete-icon{
+    width: 20px;
+    position: relative;
+    left: 90%;
+    bottom: 8%;
+    display: none;
+    cursor: pointer;
+
+}
+
+.fav:hover > .delete-icon{
+    display: block;
+}
+
+.fav-index{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fav{
+    height: 350px;
+    margin: 8px;
+    border: 1px solid $gray;
+    width: 240px;
+    height: 380px;
+}
+
+@media (max-width: 767px){
+    .fav-icon{
+        width: 20px;
+    }
+}
+

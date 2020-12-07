@@ -10,6 +10,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.3.0",
     "babel-loader": "^8.1.0",
+    "file-loader": "^6.2.0",
     "jquery": "^3.5.1",
     "jquery-zoom": "^1.7.21",
     "query-string": "^6.13.6",

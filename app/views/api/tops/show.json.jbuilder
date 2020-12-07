@@ -1,1 +1,0 @@
-json.partial! 'api/tops/top', top: @top

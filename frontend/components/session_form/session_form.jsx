@@ -24,24 +24,36 @@ class SessionForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
-                {this.props.errors.map((err, idx) => (
-                    <li key={idx}>
-                        {err}
-                    </li>
-                ))}
-            </ul>
+            <div>
+                <ul className="errors">
+                    {this.props.errors.map((err, idx) => (
+                        <li key={idx}>
+                            {err}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
         );
     }
 
+    title(){
+        if (this.props.formType == "Login"){
+            return (
+                <div className="form-title"> Welcome Back! </div>
+            )
+        } else {
+            return(
+                <div className="form-title"> Hello New User!</div>
+            )
+        }
+    }
     render(){
         return (
             <div className = "login-form-container">
-                <form className = "login-form-box" onSubmit={this.handleSubmit}>
-                    <div className="form-title">
-                        Welcome to The NMK Shop
-                    </div>
-                        
+                <form autocomplete="off"
+                className = "login-form-box" onSubmit={this.handleSubmit}>
+                    { this.title()}
                     <div className="form-request">
                         Please {this.props.formType} or {this.props.navLink}
                         {this.renderErrors()}

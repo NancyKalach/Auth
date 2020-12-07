@@ -4,4 +4,4 @@ json.extract! item, :id, :price, :size, :description
   rescue
     json.photo_url item.photo_url
   end
-json.extract! item, :options
+json.options item.optionsArray

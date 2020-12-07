@@ -15,18 +15,14 @@
  */
 @import "variables";
 
-.logo{
-    padding: 5px 300px;
-    border-right: 1px solid $gray;
-    border-left: 1px solid $gray;
-}
+
 
 .header {
     background-color: $pink;
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .header-nav {
@@ -34,6 +30,7 @@
     justify-content: space-between;
     margin: 0 auto;
     width: 100%;
+    height: 65px;
     box-sizing: border-box;
     position: relative;
 }
@@ -43,7 +40,7 @@
     box-sizing: border-box;
 
     > li{
-        padding: 10px 20px;
+        padding: 10px 15px;
     }
 }
 
@@ -52,12 +49,11 @@
     box-sizing: border-box;
     
     > li{
-        padding: 10px 20px;
-        font-size: 17px;
+        padding: 10px 15px;
     }
 }
 
-.shop{
+.account{
     display: flex;
     box-sizing: border-box;
     width: 100%;
@@ -65,7 +61,11 @@
     font-size: 17px;
 }
 
-.home{
+.logo{
+    margin-top: 20px;
+}
+
+.homeLink{
     font-size: 17px;
 }
 
@@ -78,25 +78,38 @@
     box-shadow: 0 3px 5px 0 $gray;
 }
 
-.dropdown-items{
+.account-dropdown{
     position: absolute;
     top: 40px;
     background-color: $white;
-    display: none;
+    display: block;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px $gray;
-    z-index: 1;
+    box-shadow: 0px 8px 16px 0px #b3b3b342;
+    z-index: 3;
     padding-left: 0px;
     border: 1px solid $gray;
     border-radius: 5px;
 }
 
-.dropdown-items li a {
+.account-dropdown-click{
+    position: absolute;
+    top: 40px;
+    background-color: $white;
+    display: none;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #b3b3b342;
+    z-index: 3;
+    padding-left: 0px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+}
+
+.account-dropdown li a {
     display: block;
     color: $black;
 }
 
-.dropdown-items li {
+.account-dropdown li {
     display: block;
     cursor: pointer;
     background: $white;
@@ -104,14 +117,123 @@
     border-radius: 5px;
 }
 
-.dropdown-items li:hover{
+.account-dropdown li:hover{
     > a {
         color: $pink;
     }
     
 }
 
-.dropdown:hover ul{
-    display: block;
+// .dropdown:hover ul{
+//     display: block;
+// }
+
+.home{
+    height: 500px;
+    width: 100%;
 }
 
+.home2{
+    width: 60%;
+    height: 500px;
+}
+
+.home3{
+    width: 40%;
+    height: 500px;
+}
+
+.home4{
+    width: 100%;
+    height: 500px;
+}
+
+.nav-links{
+    margin-bottom: 15px;
+    margin-top: 95px;
+    text-align: center;
+    
+    > a {
+        font-size: 23px;
+        margin-right: 50px;
+    }
+}
+
+
+.nav-links a:hover{
+    color: $pink;
+}
+
+
+@media (max-width: 480px){
+    .header-list > li{
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 10px;
+    }
+
+    .login-signup > li{
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 10px;
+    }
+    .homeLink{
+        font-size: 10px;
+    }
+
+    .logo{
+        font-size: 14px;
+        margin-left: 20px;
+    }
+
+    .account{
+        font-size: 10px;
+    }
+
+    .nav-links > a {
+        font-size: 15px;
+        margin-right: 10px
+    }
+
+    .account-dropdown{
+        min-width: 140px;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px){
+
+    .header-list > li{
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 10px;
+    }
+
+    .login-signup > li{
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 10px;
+    }
+
+    .homeLink{
+        font-size: 12px;
+    }
+    
+    .logo{
+        font-size: 14px;
+        margin-left: 20px;
+    }
+
+    .account{
+        font-size: 12px;
+    }
+
+    .nav-links > a {
+        font-size: 18px;
+        margin-right: 15px
+    }
+
+    .account-dropdown{
+        min-width: 140px;
+    }
+}
